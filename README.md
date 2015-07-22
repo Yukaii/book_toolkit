@@ -1,6 +1,10 @@
 # BookToolkit
 
-TODO: Write a gem description
+幾個常用功能包起來。
+
+還會支援 openlibrary api 還有 campusbooks api。
+
+止飢可以[先看這篇](http://yukaihuang93.logdown.com/posts/255688/campusbooks-com-api-usage)。
 
 ## Installation
 
@@ -20,7 +24,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+# convert isbn 通.用.技
+valid_isbn_13 = BookToolkit.to_isbn13("YOUR_ISBN_HERE")
+
+# will accept length 9/10/12/13
+checksum = BookToolkit.calculate_checksum("YOUR_ISBN_HERE")
+```
 
 ## Contributing
 
